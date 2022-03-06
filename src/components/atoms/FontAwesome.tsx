@@ -9,7 +9,7 @@ import {
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import {faHome} from '@fortawesome/free-solid-svg-icons';
 
-type IconKind = 'github' | 'repository' | 'twitter' | 'email' | 'home';
+type IconKind = 'github' | 'git-alt' | 'twitter' | 'email' | 'home';
 
 type Props = {
   kind: IconKind;
@@ -20,7 +20,7 @@ export const FontAwesome: FC<Props> = ({kind, className}) => {
   const icon: IconProp =
     kind === 'github'
       ? faGithub
-      : kind === 'repository'
+      : kind === 'git-alt'
       ? faGitAlt
       : kind === 'twitter'
       ? faTwitter

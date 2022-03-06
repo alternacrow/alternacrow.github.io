@@ -1,0 +1,19 @@
+@use 'setting' as *;
+
+.container {
+  display: flex;
+  padding: 16px 6px;
+  border-bottom: 1px solid color(border);
+}
+.name {
+  margin-left: 8px;
+  font-size: 14px;
+  color: color(secondary);
+  a:hover {
+    color: color(linkhover);
+  }
+}
+.description {
+  font-size: 14px;
+  color: color(gray);
+}

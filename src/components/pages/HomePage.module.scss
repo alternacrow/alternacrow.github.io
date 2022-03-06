@@ -1,0 +1,39 @@
+@use 'setting' as *;
+
+.section {
+  margin: 32px 16px 0;
+  @include sp() {
+    margin: 0 vw(8);
+    padding: vw(24) 0;
+  }
+  & + & {
+    margin-top: 64px;
+  }
+}
+.title {
+  display: flex;
+  align-items: flex-end;
+  font-size: 18px;
+  font-weight: normal;
+  color: color(primary);
+}
+.gitalt {
+  margin-right: 4px;
+  width: 22px;
+  height: 22px;
+  color: color(primary);
+}
+.readmore {
+  margin-top: 32px;
+  margin-left: auto;
+  display: inline-block;
+  background-color: color(border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  color: color(white);
+}
+.list {
+  margin-top: 12px;
+}

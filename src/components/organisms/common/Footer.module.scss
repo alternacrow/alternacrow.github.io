@@ -1,0 +1,13 @@
+@use 'setting' as *;
+
+.container {
+  padding: 24px 16px;
+  @include sp() {
+    padding: vw(16) vw(8);
+  }
+}
+.copy_right {
+  font-size: 14px;
+  color: color(note);
+  text-align: center;
+}

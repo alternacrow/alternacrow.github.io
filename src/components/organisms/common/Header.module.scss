@@ -1,0 +1,58 @@
+@use 'setting' as *;
+
+.container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  @include sp() {
+    height: auto;
+    padding: vw(16) vw(8);
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.left {
+  align-items: center;
+  @include sp() {
+    text-align: center;
+  }
+}
+.right {
+  display: flex;
+  align-items: center;
+  @include sp() {
+    margin-top: 20px;
+  }
+}
+.title {
+  font-size: 18px;
+  color: color(black);
+  @include sp() {
+    margin-left: 1.5em;
+  }
+}
+.bio {
+  margin-top: 5px;
+  font-size: 14px;
+  color: color(black);
+}
+.avatar {
+  margin-left: 4px;
+}
+.sns_link {
+  margin-left: 12px;
+  color: color(black);
+  &:first-child {
+    margin-left: 0;
+  }
+  &:hover {
+    color: color(primary);
+    transition: color 0.15s ease-in-out;
+  }
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}

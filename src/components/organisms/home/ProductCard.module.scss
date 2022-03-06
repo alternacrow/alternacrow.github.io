@@ -1,0 +1,33 @@
+@use 'setting' as *;
+
+.container {
+  display: block;
+  padding: 6px;
+  &:hover {
+    .name {
+      color: color(linkhover);
+    }
+    .icon {
+      opacity: 0.8;
+    }
+  }
+}
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  font-weight: normal;
+  color: color(secondary);
+}
+.icon {
+  margin-right: 6px;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+}
+.description {
+  margin-top: 6px;
+  font-size: 14px;
+  color: color(note);
+}

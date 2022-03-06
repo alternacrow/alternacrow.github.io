@@ -1,0 +1,15 @@
+/**
+ * font family
+ * Lato, Noto Sans JP
+ */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700');
+* {
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN',
+    'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック',
+    'MS PGothic', sans-serif;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+}

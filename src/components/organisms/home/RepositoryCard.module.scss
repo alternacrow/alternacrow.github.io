@@ -1,0 +1,29 @@
+@use 'setting' as *;
+
+.container {
+  border-bottom: 1px solid color(border);
+  padding: 12px 6px;
+}
+.name {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: normal;
+  color: color(secondary);
+}
+.link {
+  color: color(link);
+  &:hover {
+    color: color(linkhover);
+  }
+  + & {
+    margin-left: 8px;
+  }
+}
+.homepage_icon {
+  font-size: 18px;
+}
+.description {
+  margin-top: 8px;
+  font-size: 14px;
+}
