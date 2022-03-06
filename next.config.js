@@ -1,4 +1,4 @@
-const withOptimizedImages = require("next-optimized-images");
+const withOptimizedImages = require('next-optimized-images');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -7,5 +7,5 @@ const nextConfig = {
 
 module.exports = withOptimizedImages({
   ...nextConfig,
-  handleImages: ["jpeg", "png", "svg"],
+  handleImages: ['jpeg', 'png', 'svg'],
 });

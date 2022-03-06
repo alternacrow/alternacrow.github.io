@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 19 * * *"
+    - cron: '0 19 * * *'
 
 jobs:
   build-and-deploy:
@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: "main"
+          ref: 'main'
       - uses: actions/setup-node@v3
         with:
-          node-version: "16.14.0"
+          node-version: '16.14.0'
       - name: install
         run: yarn install
       - name: build
