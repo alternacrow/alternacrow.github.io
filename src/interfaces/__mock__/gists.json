@@ -1,0 +1,96 @@
+[
+  {
+    "url": "https://api.github.com/gists/7fb217e6a955fdaa6cc30d80cf5823d6",
+    "forks_url": "https://api.github.com/gists/7fb217e6a955fdaa6cc30d80cf5823d6/forks",
+    "commits_url": "https://api.github.com/gists/7fb217e6a955fdaa6cc30d80cf5823d6/commits",
+    "id": "7fb217e6a955fdaa6cc30d80cf5823d6",
+    "node_id": "MDQ6R2lzdDdmYjIxN2U2YTk1NWZkYWE2Y2MzMGQ4MGNmNTgyM2Q2",
+    "git_pull_url": "https://gist.github.com/7fb217e6a955fdaa6cc30d80cf5823d6.git",
+    "git_push_url": "https://gist.github.com/7fb217e6a955fdaa6cc30d80cf5823d6.git",
+    "html_url": "https://gist.github.com/7fb217e6a955fdaa6cc30d80cf5823d6",
+    "files": {
+      "ピープルウエアを読んで.md": {
+        "filename": "ピープルウエアを読んで.md",
+        "type": "text/markdown",
+        "language": "Markdown",
+        "raw_url": "https://gist.githubusercontent.com/alternacrow/7fb217e6a955fdaa6cc30d80cf5823d6/raw/6f490704e937c949480fa34f3ef79d2e0639d0b4/%E3%83%94%E3%83%BC%E3%83%97%E3%83%AB%E3%82%A6%E3%82%A8%E3%82%A2%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7.md",
+        "size": 1944
+      }
+    },
+    "public": true,
+    "created_at": "2021-02-25T11:50:10Z",
+    "updated_at": "2021-03-11T12:23:28Z",
+    "description": "",
+    "comments": 0,
+    "user": null,
+    "comments_url": "https://api.github.com/gists/7fb217e6a955fdaa6cc30d80cf5823d6/comments",
+    "owner": {
+      "login": "alternacrow",
+      "id": 35155361,
+      "node_id": "MDQ6VXNlcjM1MTU1MzYx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35155361?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alternacrow",
+      "html_url": "https://github.com/alternacrow",
+      "followers_url": "https://api.github.com/users/alternacrow/followers",
+      "following_url": "https://api.github.com/users/alternacrow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alternacrow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alternacrow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alternacrow/subscriptions",
+      "organizations_url": "https://api.github.com/users/alternacrow/orgs",
+      "repos_url": "https://api.github.com/users/alternacrow/repos",
+      "events_url": "https://api.github.com/users/alternacrow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alternacrow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "truncated": false
+  },
+  {
+    "url": "https://api.github.com/gists/64c6af1402aa93065623c03f2944b1d7",
+    "forks_url": "https://api.github.com/gists/64c6af1402aa93065623c03f2944b1d7/forks",
+    "commits_url": "https://api.github.com/gists/64c6af1402aa93065623c03f2944b1d7/commits",
+    "id": "64c6af1402aa93065623c03f2944b1d7",
+    "node_id": "MDQ6R2lzdDY0YzZhZjE0MDJhYTkzMDY1NjIzYzAzZjI5NDRiMWQ3",
+    "git_pull_url": "https://gist.github.com/64c6af1402aa93065623c03f2944b1d7.git",
+    "git_push_url": "https://gist.github.com/64c6af1402aa93065623c03f2944b1d7.git",
+    "html_url": "https://gist.github.com/64c6af1402aa93065623c03f2944b1d7",
+    "files": {
+      "css-design-bem-flocss.md": {
+        "filename": "css-design-bem-flocss.md",
+        "type": "text/markdown",
+        "language": "Markdown",
+        "raw_url": "https://gist.githubusercontent.com/alternacrow/64c6af1402aa93065623c03f2944b1d7/raw/7e47a4fc03714fa990ca951f04d495f9bc42df65/css-design-bem-flocss.md",
+        "size": 2304
+      }
+    },
+    "public": true,
+    "created_at": "2020-05-22T16:48:45Z",
+    "updated_at": "2021-01-14T14:09:13Z",
+    "description": "CSS設計 - BEM + FLOCSS",
+    "comments": 0,
+    "user": null,
+    "comments_url": "https://api.github.com/gists/64c6af1402aa93065623c03f2944b1d7/comments",
+    "owner": {
+      "login": "alternacrow",
+      "id": 35155361,
+      "node_id": "MDQ6VXNlcjM1MTU1MzYx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35155361?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alternacrow",
+      "html_url": "https://github.com/alternacrow",
+      "followers_url": "https://api.github.com/users/alternacrow/followers",
+      "following_url": "https://api.github.com/users/alternacrow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alternacrow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alternacrow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alternacrow/subscriptions",
+      "organizations_url": "https://api.github.com/users/alternacrow/orgs",
+      "repos_url": "https://api.github.com/users/alternacrow/repos",
+      "events_url": "https://api.github.com/users/alternacrow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alternacrow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "truncated": false
+  }
+]
