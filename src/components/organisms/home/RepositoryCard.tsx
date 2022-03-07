@@ -1,16 +1,12 @@
 import React, {FC} from 'react';
 import styles from './RepositoryCard.module.scss';
 
+import type {GithubRepository} from '../../../interfaces';
+
 import {FontAwesome, ExternalLink} from '../../atoms';
 
 type Props = {
-  repository?: {
-    id: string;
-    url: string;
-    name: string;
-    homepageUrl: string;
-    description: string;
-  };
+  repository?: Partial<GithubRepository>;
 };
 
 export const RepositoryCard: FC<Props> = ({repository = {}}) => (
@@ -19,8 +15,8 @@ export const RepositoryCard: FC<Props> = ({repository = {}}) => (
       <ExternalLink className={styles.link} href={repository.url}>
         {repository.name}
       </ExternalLink>
-      {repository.homepageUrl ? (
-        <ExternalLink className={styles.link} href={repository.homepageUrl}>
+      {repository.homepage ? (
+        <ExternalLink className={styles.link} href={repository.homepage}>
           <FontAwesome className={styles.homepage_icon} kind="home" />
         </ExternalLink>
       ) : null}

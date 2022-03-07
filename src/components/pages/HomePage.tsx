@@ -1,45 +1,36 @@
 import React, {FC} from 'react';
 import styles from './HomePage.module.scss';
 
-import {products} from '../../assets/contents/products';
+import type {
+  Product,
+  GithubUser,
+  GithubRepository,
+  GithubGist,
+} from '../../interfaces';
 
 import {Layout} from '../templates';
 import {ProductCard, RepositoryCard, GistCard} from '../organisms';
 import {FontAwesome, ExternalLink} from '../atoms';
 
 type Props = {
-  githubUrl?: string;
-  gistUrl?: string;
-  repositories?: {
-    id: string;
-    url: string;
-    name: string;
-    homepageUrl: string;
-    description: string;
-  }[];
-  gists?: {
-    id: string;
-    updatedAt: string;
-    url: string;
-    description: string;
-  }[];
+  user: GithubUser;
+  products: Product[];
+  repositories: GithubRepository[];
+  gists: GithubGist[];
 };
 
-export const HomePage: FC<Props> = ({
-  githubUrl = '',
-  gistUrl = '',
-  repositories = [],
-  gists = [],
-}) => (
-  <Layout>
-    <section className={styles.section}>
-      <h2 className={styles.title}>Products</h2>
-      <dl className={styles.list}>
-        {products.map(product => (
-          <ProductCard key={`product-${product.name}`} product={product} />
-        ))}
-      </dl>
-    </section>
+export const HomePage: FC<Props> = ({user, products, repositories, gists}) => (
+  <Layout user={user}>
+    {products.length > 0 ? (
+      <section className={styles.section}>
+        <h2 className={styles.title}>Products</h2>
+        <dl className={styles.list}>
+          {products.map(product => (
+            <ProductCard key={`product-${product.name}`} product={product} />
+          ))}
+        </dl>
+      </section>
+    ) : null}
 
     <section className={styles.section}>
       <h2 className={styles.title}>
@@ -51,7 +42,7 @@ export const HomePage: FC<Props> = ({
           <RepositoryCard key={repository?.id} repository={repository} />
         ))}
       </dl>
-      <ExternalLink className={styles.readmore} href={githubUrl}>
+      <ExternalLink className={styles.readmore} href={user.repos_url}>
         All Repositories
       </ExternalLink>
     </section>
@@ -63,7 +54,7 @@ export const HomePage: FC<Props> = ({
           <GistCard key={gist?.id} gist={gist} />
         ))}
       </dl>
-      <ExternalLink className={styles.readmore} href={gistUrl}>
+      <ExternalLink className={styles.readmore} href={user.gists_url}>
         All Gists
       </ExternalLink>
     </section>

@@ -2,29 +2,25 @@ import React, {FC} from 'react';
 import Link from 'next/link';
 import styles from './Header.module.scss';
 
+import type {GithubUser} from '../../../interfaces';
+import avatar from '../../../assets/images/icon.svg';
+
 import {FontAwesome, ExternalLink} from '../../atoms';
 
 type Props = {
-  user?: {
-    login: string;
-    avatarUrl: string;
-    bio: string;
-    url: string;
-    twitterUsername: string;
-    email: string;
-  };
+  user: GithubUser;
 };
 
-export const Header: FC<Props> = ({user = {}}) => (
+export const Header: FC<Props> = ({user}) => (
   <header className={styles.container}>
     <h1 className={styles.left}>
-      <Link href={'/'} passHref>
+      <Link href={user.url} passHref>
         <a>
           <span className={styles.title}>{user.login}</span>
           <img
             className={styles.avatar}
-            src={user?.avatarUrl}
-            alt={user?.login}
+            src={'/images/icon.svg'}
+            alt={user.login}
           />
           <p className={styles.bio}>{user?.bio}</p>
         </a>
@@ -36,11 +32,11 @@ export const Header: FC<Props> = ({user = {}}) => (
       </ExternalLink>
       <ExternalLink
         className={styles.sns_link}
-        href={`https://twitter.com/${user?.twitterUsername}`}
+        href={`https://twitter.com/alternacrow`}
       >
         <FontAwesome className={styles.icon} kind={'twitter'} />
       </ExternalLink>
-      <ExternalLink className={styles.sns_link} href={`mailto:${user?.email}`}>
+      <ExternalLink className={styles.sns_link} href={`mailto:${user.email}`}>
         <FontAwesome className={styles.icon} kind={'email'} />
       </ExternalLink>
     </div>
