@@ -2,13 +2,14 @@ import type {NextPage} from 'next';
 import type {GetStaticProps} from 'next';
 import Head from 'next/head';
 
-import {Products} from '../src/assets/contents';
 import type {
   GithubUser,
   Product,
   GithubRepository,
   GithubGist,
 } from '../src/interfaces';
+import {api} from '../src/utils';
+import {Products} from '../src/assets/contents';
 
 import {HomePage} from '../src/components/pages/HomePage';
 
@@ -40,27 +41,22 @@ const Home: NextPage<Props> = ({user, products, repositories, gists}) => {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   // user
-  const userRes = await fetch('https://api.github.com/users/alternacrow');
-  const user: GithubUser = await userRes.json();
+  const user = await api.fetchGithubUser();
 
   // repositories
-  const repositoriesRes = await fetch(
-    'https://api.github.com/users/alternacrow/repos',
-  );
-  const repositories: GithubRepository[] = await repositoriesRes.json();
-  const originalRepositories = repositories.filter(repo => !repo.fork);
+  const repositories = await api.fetchGithubRepositories();
+  const tenOrLessOriginalRepositories = repositories
+    .filter(repo => !repo.fork)
+    .slice(0, 10);
 
   // gists
-  const gistsRes = await fetch(
-    'https://api.github.com/users/alternacrow/gists',
-  );
-  const gists: GithubGist[] = await gistsRes.json();
+  const gists: GithubGist[] = await api.fetchGithubGists();
 
   return {
     props: {
       user,
       products: Products,
-      repositories: originalRepositories,
+      repositories: tenOrLessOriginalRepositories,
       gists,
     },
   };

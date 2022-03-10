@@ -7,6 +7,10 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src', 'assets', 'styles')],
   },
+  env: {
+    USERNAME: 'alternacrow',
+    GITHUB_API_URL: 'https://api.github.com',
+  },
 };
 
 module.exports = withOptimizedImages({
