@@ -35,7 +35,7 @@ export const HomePage: FC<Props> = ({user, products, repositories, gists}) => (
 
     <section className={styles.section}>
       <h2 className={styles.title}>
-        <FontAwesome className={styles.git_alt_icon} kind="git-alt" />
+        <FontAwesome className={styles.title_icon} kind="git-alt" />
         Repositories
       </h2>
       <dl className={styles.list}>
@@ -52,7 +52,10 @@ export const HomePage: FC<Props> = ({user, products, repositories, gists}) => (
     </section>
 
     <section className={styles.section}>
-      <h2 className={styles.title}>Gists</h2>
+      <h2 className={styles.title}>
+        <FontAwesome className={styles.title_icon} kind="github-alt" />
+        Gists
+      </h2>
       <dl className={styles.list}>
         {gists.map(gist => (
           <GistCard key={gist?.id} gist={gist} />

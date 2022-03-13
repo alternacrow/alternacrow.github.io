@@ -21,20 +21,22 @@ export const RepositoryCard: FC<Props> = ({repository = {}}) => (
           <FontAwesome className={styles.homepage_icon} kind="home" />
         </ExternalLink>
       ) : null}
-      {repository.archived ? (
-        <FontAwesome className={styles.archived_icon} kind="file-zipper" />
-      ) : null}
     </dt>
     <dd>
       <p className={styles.description}>{repository.description}</p>
-      {repository.updated_at ? (
-        <time className={styles.updated_on} dateTime={repository.updated_at}>
-          {`Updated on ${du.localDateStringFromISOString(
-            repository.updated_at,
-            'MMMM D, YYYY',
-          )}`}
-        </time>
-      ) : null}
+      <div className={styles.sub}>
+        {repository.archived ? (
+          <FontAwesome className={styles.archived_icon} kind="file-zipper" />
+        ) : null}
+        {repository.updated_at ? (
+          <time className={styles.updated_on} dateTime={repository.updated_at}>
+            {`Updated on ${du.localDateStringFromISOString(
+              repository.updated_at,
+              'MMMM D, YYYY',
+            )}`}
+          </time>
+        ) : null}
+      </div>
     </dd>
   </div>
 );
