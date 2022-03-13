@@ -1,1 +1,1 @@
-export * as api from './api';
+export * as github from './github';

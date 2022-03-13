@@ -1,7 +1,7 @@
 import {GithubUser, GithubRepository, GithubGist} from '../interfaces';
 import {GITHUB_API_URL, USERNAME} from '../configs';
 
-export const fetchGithubUser = async () => {
+export const fetchUser = async () => {
   const url = `${GITHUB_API_URL}/users/${USERNAME}`;
   const res = await fetch(url);
   const user: GithubUser = await res.json();
@@ -9,7 +9,7 @@ export const fetchGithubUser = async () => {
   return user;
 };
 
-export const fetchGithubRepositories = async () => {
+export const fetchRepositories = async () => {
   const url = `${GITHUB_API_URL}/users/${USERNAME}/repos`;
   const res = await fetch(url);
   const repositories: GithubRepository[] = await res.json();
@@ -17,7 +17,7 @@ export const fetchGithubRepositories = async () => {
   return repositories;
 };
 
-export const fetchGithubGists = async () => {
+export const fetchGists = async () => {
   const url = `${GITHUB_API_URL}/users/${USERNAME}/gists`;
   const res = await fetch(url);
   const gists: GithubGist[] = await res.json();

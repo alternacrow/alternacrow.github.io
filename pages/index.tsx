@@ -8,7 +8,7 @@ import type {
   GithubRepository,
   GithubGist,
 } from '../src/interfaces';
-import {api} from '../src/utils';
+import {github} from '../src/utils';
 import {Products} from '../src/assets/contents';
 
 import {HomePage} from '../src/components/pages/HomePage';
@@ -41,16 +41,17 @@ const Home: NextPage<Props> = ({user, products, repositories, gists}) => {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   // user
-  const user = await api.fetchGithubUser();
+  const user = await github.fetchUser();
 
   // repositories
-  const repositories = await api.fetchGithubRepositories();
+  const repositories = await github.fetchRepositories();
   const tenOrLessOriginalRepositories = repositories
     .filter(repo => !repo.fork)
-    .slice(0, 10);
+    .slice(0, 10)
+    .sort((_a, b) => (b.archived ? -1 : 1));
 
   // gists
-  const gists: GithubGist[] = await api.fetchGithubGists();
+  const gists: GithubGist[] = await github.fetchGists();
 
   return {
     props: {
