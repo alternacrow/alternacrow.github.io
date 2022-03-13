@@ -8,8 +8,8 @@ export const setupDayjs = () => {
 
 type ISOString = string;
 export const localDateStringFromISOString = (
-  iosString: ISOString,
+  isoString: ISOString,
   format?: string,
 ) => {
-  return dayjs(iosString).format(format);
+  return dayjs(isoString).format(format);
 };
