@@ -1,7 +1,7 @@
 @use 'setting' as *;
 
 .container {
-  height: 80px;
+  height: 128px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,17 +13,10 @@
     justify-content: center;
   }
 }
-.left {
+.profile {
   align-items: center;
   @include sp() {
     text-align: center;
-  }
-}
-.right {
-  display: flex;
-  align-items: center;
-  @include sp() {
-    margin-top: 20px;
   }
 }
 .title {
@@ -42,6 +35,13 @@
   margin-left: 4px;
   width: 28px;
   height: 28px;
+}
+.link_list {
+  display: flex;
+  align-items: center;
+  @include sp() {
+    margin-top: 20px;
+  }
 }
 .sns_link {
   margin-left: 12px;

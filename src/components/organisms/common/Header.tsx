@@ -3,7 +3,6 @@ import Link from 'next/link';
 import styles from './Header.module.scss';
 
 import type {GithubUser} from '../../../interfaces';
-import avatar from '../../../assets/images/icon.svg';
 
 import {FontAwesome, ExternalLink} from '../../atoms';
 
@@ -13,7 +12,7 @@ type Props = {
 
 export const Header: FC<Props> = ({user}) => (
   <header className={styles.container}>
-    <h1 className={styles.left}>
+    <h1 className={styles.profile}>
       <Link href={user.url} passHref>
         <a>
           <span className={styles.title}>{user.login}</span>
@@ -26,7 +25,7 @@ export const Header: FC<Props> = ({user}) => (
         </a>
       </Link>
     </h1>
-    <div className={styles.right}>
+    <div className={styles.link_list}>
       <ExternalLink className={styles.sns_link} href={user?.url}>
         <FontAwesome className={styles.icon} kind={'github'} />
       </ExternalLink>

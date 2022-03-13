@@ -7,9 +7,15 @@ import {
   faGitAlt,
 } from '@fortawesome/free-brands-svg-icons';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
-import {faHome} from '@fortawesome/free-solid-svg-icons';
+import {faHome, faFileZipper} from '@fortawesome/free-solid-svg-icons';
 
-type IconKind = 'github' | 'git-alt' | 'twitter' | 'email' | 'home';
+type IconKind =
+  | 'github'
+  | 'git-alt'
+  | 'twitter'
+  | 'email'
+  | 'home'
+  | 'file-zipper';
 
 type Props = {
   kind: IconKind;
@@ -28,7 +34,9 @@ export const FontAwesome: FC<Props> = ({kind, className}) => {
       ? faEnvelope
       : kind === 'home'
       ? faHome
-      : faGithub;
+      : kind === 'file-zipper'
+      ? faFileZipper
+      : faHome;
 
   return <FontAwesomeIcon className={className} icon={icon} />;
 };

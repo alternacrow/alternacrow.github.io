@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
-import type {Product} from '../../../interfaces';
 import styles from './ProductCard.module.scss';
+
+import type {Product} from '../../../interfaces';
 
 import {ExternalLink} from '../../atoms';
 

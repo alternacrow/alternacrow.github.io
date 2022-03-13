@@ -7,6 +7,7 @@ import type {
   GithubRepository,
   GithubGist,
 } from '../../interfaces';
+import {GITHUB_GIST_URL, USERNAME} from '../../configs';
 
 import {Layout} from '../templates';
 import {ProductCard, RepositoryCard, GistCard} from '../organisms';
@@ -34,7 +35,7 @@ export const HomePage: FC<Props> = ({user, products, repositories, gists}) => (
 
     <section className={styles.section}>
       <h2 className={styles.title}>
-        <FontAwesome className={styles.gitalt} kind="git-alt" />
+        <FontAwesome className={styles.git_alt_icon} kind="git-alt" />
         Repositories
       </h2>
       <dl className={styles.list}>
@@ -42,8 +43,11 @@ export const HomePage: FC<Props> = ({user, products, repositories, gists}) => (
           <RepositoryCard key={repository?.id} repository={repository} />
         ))}
       </dl>
-      <ExternalLink className={styles.readmore} href={user.repos_url}>
-        All Repositories
+      <ExternalLink
+        className={styles.readmore}
+        href={`${user.html_url}?tab=repositories`}
+      >
+        {`→ All Repositories`}
       </ExternalLink>
     </section>
 
@@ -54,8 +58,11 @@ export const HomePage: FC<Props> = ({user, products, repositories, gists}) => (
           <GistCard key={gist?.id} gist={gist} />
         ))}
       </dl>
-      <ExternalLink className={styles.readmore} href={user.gists_url}>
-        All Gists
+      <ExternalLink
+        className={styles.readmore}
+        href={`${GITHUB_GIST_URL}/${USERNAME}`}
+      >
+        {`→ All Gists`}
       </ExternalLink>
     </section>
   </Layout>
