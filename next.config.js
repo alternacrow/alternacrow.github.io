@@ -10,6 +10,7 @@ const nextConfig = {
   env: {
     USERNAME: 'alternacrow',
     GITHUB_API_URL: 'https://api.github.com',
+    GITHUB_GIST_URL: 'https://gist.github.com',
   },
 };
 
