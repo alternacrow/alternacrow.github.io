@@ -54,9 +54,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   // repositories
   const repositories = await github.fetchRepositories();
-  const tenOrLessOriginalRepositories = repositories
+  const originalRepositories = repositories
     .filter(repo => !repo.fork)
-    .slice(0, 10)
     .sort((_a, b) => (b.archived ? -1 : 1));
 
   // gists
@@ -69,9 +68,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     props: {
       user,
       products: Products,
-      repositories: tenOrLessOriginalRepositories,
-      gists,
-      qiitaArticles,
+      repositories: originalRepositories.slice(0, 10),
+      gists: gists.slice(0, 10),
+      qiitaArticles: qiitaArticles.slice(0, 10),
     },
   };
 };
