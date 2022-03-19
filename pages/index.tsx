@@ -7,8 +7,9 @@ import type {
   Product,
   GithubRepository,
   GithubGist,
+  QiitaArticle,
 } from '../src/interfaces';
-import {github} from '../src/utils';
+import {github, qiita} from '../src/utils';
 import {Products} from '../src/assets/contents';
 
 import {HomePage} from '../src/components/pages/HomePage';
@@ -18,9 +19,16 @@ type Props = {
   products: Product[];
   repositories: GithubRepository[];
   gists: GithubGist[];
+  qiitaArticles: QiitaArticle[];
 };
 
-const Home: NextPage<Props> = ({user, products, repositories, gists}) => {
+const Home: NextPage<Props> = ({
+  user,
+  products,
+  repositories,
+  gists,
+  qiitaArticles,
+}) => {
   return (
     <>
       <Head>
@@ -34,6 +42,7 @@ const Home: NextPage<Props> = ({user, products, repositories, gists}) => {
         products={products}
         repositories={repositories}
         gists={gists}
+        qiitaArticles={qiitaArticles}
       />
     </>
   );
@@ -53,12 +62,16 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   // gists
   const gists: GithubGist[] = await github.fetchGists();
 
+  // qiita articles
+  const qiitaArticles: QiitaArticle[] = await qiita.fetchArticles();
+
   return {
     props: {
       user,
       products: Products,
       repositories: tenOrLessOriginalRepositories,
       gists,
+      qiitaArticles,
     },
   };
 };

@@ -10,8 +10,9 @@ const nextConfig = {
   env: {
     USERNAME: 'alternacrow',
     GITHUB_API_URL: 'https://api.github.com',
-    GITHUB_GIST_URL: 'https://gist.github.com',
     QIITA_API_URL: 'https://qiita.com/api/v2',
+    GITHUB_GIST_URL: 'https://gist.github.com',
+    QIITA_URL: 'https://qiita.com',
   },
 };
 

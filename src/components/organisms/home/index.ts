@@ -1,3 +1,4 @@
-export * from './GistCard';
 export * from './ProductCard';
-export * from './RepositoryCard';
+export * from './GithubGistCard';
+export * from './GithubRepositoryCard';
+export * from './QiitaArticleCard';

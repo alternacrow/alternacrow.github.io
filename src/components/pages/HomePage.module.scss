@@ -1,28 +1,24 @@
 @use 'setting' as *;
 
 .section {
-  margin: 32px 16px 0;
+  padding: 32px 16px;
   @include sp() {
-    margin: 32px vw(8) 0;
-  }
-  & + & {
-    margin-top: 64px;
-    @include sp() {
-      margin-top: 32px;
-    }
+    padding: 32px vw(8);
   }
 }
 .title {
   display: flex;
-  align-items: flex-end;
-  font-size: 20px;
+  align-items: center;
+  font-size: 18px;
   color: color(primary);
 }
 .title_icon {
   margin-right: 4px;
   width: 22px;
   height: 22px;
-  color: color(primary);
+}
+.github_icon {
+  color: color(black);
 }
 .readmore {
   margin-top: 16px;

@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import styles from './GistCard.module.scss';
+import styles from './GithubGistCard.module.scss';
 
 import type {GithubGist} from '../../../interfaces';
 import {du} from '../../../utils';
@@ -10,7 +10,7 @@ type Props = {
   gist?: Partial<GithubGist>;
 };
 
-export const GistCard: FC<Props> = ({gist = {}}) => {
+export const GithubGistCard: FC<Props> = ({gist = {}}) => {
   return (
     <div className={styles.container}>
       <dd className={styles.description}>

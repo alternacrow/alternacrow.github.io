@@ -6,11 +6,17 @@ import type {
   GithubUser,
   GithubRepository,
   GithubGist,
+  QiitaArticle,
 } from '../../interfaces';
-import {GITHUB_GIST_URL, USERNAME} from '../../configs';
+import {USERNAME, GITHUB_GIST_URL, QIITA_URL} from '../../configs';
 
 import {Layout} from '../templates';
-import {ProductCard, RepositoryCard, GistCard} from '../organisms';
+import {
+  ProductCard,
+  GithubRepositoryCard,
+  GithubGistCard,
+  QiitaArticleCard,
+} from '../organisms';
 import {FontAwesome, ExternalLink} from '../atoms';
 
 type Props = {
@@ -18,9 +24,16 @@ type Props = {
   products: Product[];
   repositories: GithubRepository[];
   gists: GithubGist[];
+  qiitaArticles: QiitaArticle[];
 };
 
-export const HomePage: FC<Props> = ({user, products, repositories, gists}) => (
+export const HomePage: FC<Props> = ({
+  user,
+  products,
+  repositories,
+  gists,
+  qiitaArticles,
+}) => (
   <Layout user={user}>
     {products.length > 0 ? (
       <section className={styles.section}>
@@ -35,12 +48,15 @@ export const HomePage: FC<Props> = ({user, products, repositories, gists}) => (
 
     <section className={styles.section}>
       <h2 className={styles.title}>
-        <FontAwesome className={styles.title_icon} kind="git-alt" />
+        <FontAwesome
+          className={[styles.title_icon, styles.github_icon].join(' ')}
+          kind="git-alt"
+        />
         Repositories
       </h2>
       <dl className={styles.list}>
         {repositories.map(repository => (
-          <RepositoryCard key={repository?.id} repository={repository} />
+          <GithubRepositoryCard key={repository.id} repository={repository} />
         ))}
       </dl>
       <ExternalLink
@@ -53,12 +69,15 @@ export const HomePage: FC<Props> = ({user, products, repositories, gists}) => (
 
     <section className={styles.section}>
       <h2 className={styles.title}>
-        <FontAwesome className={styles.title_icon} kind="github-alt" />
+        <FontAwesome
+          className={[styles.title_icon, styles.github_icon].join(' ')}
+          kind="github-alt"
+        />
         Gists
       </h2>
       <dl className={styles.list}>
         {gists.map(gist => (
-          <GistCard key={gist?.id} gist={gist} />
+          <GithubGistCard key={gist.id} gist={gist} />
         ))}
       </dl>
       <ExternalLink
@@ -66,6 +85,28 @@ export const HomePage: FC<Props> = ({user, products, repositories, gists}) => (
         href={`${GITHUB_GIST_URL}/${USERNAME}`}
       >
         {`→ All Gists`}
+      </ExternalLink>
+    </section>
+
+    <section className={styles.section}>
+      <h2 className={styles.title}>
+        <img
+          className={styles.title_icon}
+          src={'/images/qiita.png'}
+          alt={`qiita articles icon`}
+        />
+        Qiita Articles
+      </h2>
+      <dl className={styles.list}>
+        {qiitaArticles.map(qiitaArticle => (
+          <QiitaArticleCard key={qiitaArticle.id} qiitaArticle={qiitaArticle} />
+        ))}
+      </dl>
+      <ExternalLink
+        className={styles.readmore}
+        href={`${QIITA_URL}/${USERNAME}`}
+      >
+        {`→ All Qiita Articles`}
       </ExternalLink>
     </section>
   </Layout>

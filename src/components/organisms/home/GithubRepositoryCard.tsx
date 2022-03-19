@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import styles from './RepositoryCard.module.scss';
+import styles from './GithubRepositoryCard.module.scss';
 
 import type {GithubRepository} from '../../../interfaces';
 import {du} from '../../../utils';
@@ -10,7 +10,7 @@ type Props = {
   repository?: Partial<GithubRepository>;
 };
 
-export const RepositoryCard: FC<Props> = ({repository = {}}) => (
+export const GithubRepositoryCard: FC<Props> = ({repository = {}}) => (
   <div className={styles.container}>
     <dt className={styles.title}>
       <ExternalLink className={styles.link} href={repository.html_url}>
