@@ -17,7 +17,11 @@ export const GithubRepositoryCard: FC<Props> = ({repository = {}}) => (
         {repository.name}
       </ExternalLink>
       {repository.homepage ? (
-        <ExternalLink className={styles.link} href={repository.homepage}>
+        <ExternalLink
+          className={styles.link}
+          href={repository.homepage}
+          aria-label={`${repository.name} homepage`}
+        >
           <FontAwesome className={styles.homepage_icon} kind="home" />
         </ExternalLink>
       ) : null}

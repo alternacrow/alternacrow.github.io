@@ -92,7 +92,9 @@ export const HomePage: FC<Props> = ({
       <h2 className={styles.title}>
         <img
           className={styles.title_icon}
-          src={'/images/qiita.png'}
+          src={'/qiita.png'}
+          width={22}
+          height={22}
           alt={`qiita articles icon`}
         />
         Qiita Articles
