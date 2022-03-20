@@ -8,6 +8,9 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'src', 'assets', 'styles')],
   },
   env: {
+    TITLE: 'alternacrow',
+    URL: 'https://alternacrow.github.io',
+    DESCRIPTION: 'I love web development!!',
     USERNAME: 'alternacrow',
     GITHUB_API_URL: 'https://api.github.com',
     QIITA_API_URL: 'https://qiita.com/api/v2',

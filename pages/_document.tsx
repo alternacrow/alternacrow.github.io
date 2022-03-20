@@ -16,12 +16,17 @@ class MyDocument extends Document {
             name="format-detection"
             content="email=no,telephone=no,address=no"
           />
-          <link rel="canonical" href="https://alternacrow.github.io" />
+
+          {/** favicon */}
           <link rel="icon" href="/favicon.ico" sizes="any" />
           <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link
+            rel="apple-touch-icon-precomposed"
+            href="/apple-touch-icon-precomposed.png"
+          />
           <link rel="manifest" href="/manifest.webmanifest" />
 
+          {/** font */}
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700&display=swap"

@@ -1,6 +1,6 @@
 import type {NextPage} from 'next';
 import type {GetStaticProps} from 'next';
-import Head from 'next/head';
+import {Head} from '../src/utils';
 
 import type {
   GithubUser,
@@ -31,30 +31,7 @@ const Home: NextPage<Props> = ({
 }) => {
   return (
     <>
-      <Head>
-        <title>alternacrow</title>
-        <meta name="description" content="I love web development!!" />
-        <meta property="og:title" content="alternacrow"></meta>
-        <meta property="og:locale" content="ja_JP"></meta>
-        <meta property="og:description" content="I love web development!!" />
-        <meta property="og:url" content="https://alternacrow.github.io" />
-        <meta property="og:site_name" content="alternacrow" />
-        <meta name="twitter:card" content="summary" />
-        <meta property="twitter:title" content="alternacrow" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              description: 'I love web development!!',
-              url: 'https://alternacrow.github.io',
-              '@type': 'WebSite',
-              headline: 'alternacrow',
-              name: 'alternacrow',
-              '@context': 'https://schema.org',
-            }),
-          }}
-        />
-      </Head>
+      <Head title="Home" description="I love web development!!" />
       <HomePage
         user={user}
         products={products}
