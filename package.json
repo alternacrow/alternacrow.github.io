@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "next dev",
-    "export": "next build && next export",
+    "build": "next build",
+    "export": "yarn build && next export",
     "serve": "yarn export && serve ./out",
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "next lint",
