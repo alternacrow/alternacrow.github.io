@@ -1,0 +1,60 @@
+@use 'setting' as *;
+
+.container {
+  padding: 48px 16px 32px;
+
+  section {
+    margin-top: 24px;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 1.5;
+    padding-bottom: 4px;
+    border-bottom: 2px solid color(secondary);
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-bottom: 4px;
+  }
+  * + h3 {
+    margin-top: 12px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    + p {
+      margin-top: 8px;
+    }
+  }
+  h1 + p {
+    margin-top: 16px;
+  }
+  h2 + p {
+    margin-top: 8px;
+  }
+  h3 + p {
+    margin-top: 8px;
+  }
+
+  a {
+    display: block;
+    color: color(link);
+    &:hover {
+      color: color(linkhover);
+    }
+  }
+  * + a {
+    margin-top: 8px;
+  }
+}
