@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import Link from 'next/link';
 import styles from './Header.module.scss';
+import {EMAIL} from '../../../configs';
 
 import type {GithubUser} from '../../../interfaces';
 
@@ -13,7 +14,7 @@ type Props = {
 export const Header: FC<Props> = ({user}) => (
   <header className={styles.container}>
     <h1 className={styles.profile}>
-      <Link href={user.url} passHref>
+      <Link href={user.html_url} passHref>
         <a>
           <span className={styles.title}>{user.login}</span>
           <img
@@ -30,7 +31,7 @@ export const Header: FC<Props> = ({user}) => (
     <div className={styles.link_list}>
       <ExternalLink
         className={styles.sns_link}
-        href={user?.url}
+        href={user.html_url}
         aria-label="github"
       >
         <FontAwesome className={styles.icon} kind={'github'} />
@@ -44,7 +45,7 @@ export const Header: FC<Props> = ({user}) => (
       </ExternalLink>
       <ExternalLink
         className={styles.sns_link}
-        href={`mailto:${user.email}`}
+        href={`mailto:${EMAIL}`}
         aria-label="email"
       >
         <FontAwesome className={styles.icon} kind={'email'} />

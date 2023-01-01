@@ -12,6 +12,7 @@ const nextConfig = {
     URL: 'https://alternacrow.github.io',
     DESCRIPTION: 'I love web development!!',
     USERNAME: 'alternacrow',
+    EMAIL: 'k.horita21@gmail.com',
     GITHUB_API_URL: 'https://api.github.com',
     QIITA_API_URL: 'https://qiita.com/api/v2',
     GITHUB_GIST_URL: 'https://gist.github.com',
