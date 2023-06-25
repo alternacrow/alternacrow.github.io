@@ -1,0 +1,39 @@
+.main {
+  min-height: 100vh;
+}
+
+.article {
+  margin-inline: auto;
+  max-width: var(--max-width);
+}
+
+.section {
+  padding-block: 16px;
+}
+
+.h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+  padding: 8px;
+  letter-spacing: 2px;
+}
+
+.productCard {
+  margin-inline: 8px;
+  margin-block: 12px;
+  display: block;
+}
+
+.productCardNearIcon {
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.productCardMearisStudioIcon {
+  border-radius: 8px;
+  border: 1px solid var(--secondary);
+  width: 32px;
+  height: 32px;
+}

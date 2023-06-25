@@ -1,0 +1,8 @@
+.container {
+  padding: 24px 16px;
+}
+.copy_right {
+  font-size: 14px;
+  color: color(note);
+  text-align: center;
+}

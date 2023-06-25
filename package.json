@@ -2,51 +2,22 @@
   "name": "alternacrow.github.io",
   "version": "0.1.0",
   "private": true,
-  "description": "alternacrow's home page",
-  "author": "Kazuaki Horita",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alternacrow/alternacrow.github.io"
-  },
   "scripts": {
-    "start": "next dev",
+    "dev": "next dev",
     "build": "next build",
-    "export": "yarn build && next export",
-    "serve": "yarn export && serve ./out",
-    "lint": "yarn lint:eslint && yarn lint:prettier",
-    "lint:eslint": "next lint",
-    "lint:prettier": "prettier --check .",
-    "type-check": "tsc --noEmit",
-    "format": "prettier --write .",
-    "clean": "rimraf .next out node_modules"
-  },
-  "engines": {
-    "node": ">=16.14.0"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.3.0",
-    "@fortawesome/free-brands-svg-icons": "^6.0.0",
-    "@fortawesome/free-regular-svg-icons": "^6.0.0",
-    "@fortawesome/free-solid-svg-icons": "^6.0.0",
-    "@fortawesome/react-fontawesome": "^0.1.17",
-    "dayjs": "^1.10.8",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^9.0.0",
-    "next": "12.1.0",
-    "next-optimized-images": "^2.6.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "sass": "^1.49.9"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.21",
-    "@types/react": "17.0.39",
-    "eslint": "8.10.0",
-    "eslint-config-next": "12.1.0",
-    "prettier": "^2.5.1",
-    "rimraf": "^3.0.2",
-    "serve": "^13.0.2",
-    "typescript": "4.6.2"
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.7",
+    "next": "13.4.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "typescript": "5.1.3"
   }
 }
