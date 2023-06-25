@@ -1,0 +1,43 @@
+/* constants */
+:root {
+  --max-width: 720px;
+}
+
+/* theme */
+:root {
+  /* base */
+  --primary: #ff2e63;
+  --secondary: #3c84b0;
+  --tertiary: #f4f4f4;
+  /* --primary: #60b683;
+  --secondary: #ffea00;
+  --tertiary: #f8f5e3; */
+
+  /*  mono tone */
+  --black: #2a2a2a;
+  --gray: #626262;
+  --white: #ffffff;
+  --blur: rgba(0, 0, 0, 0.7);
+
+  /* unique */
+  --text: #2a2a2a;
+  --note: #646464;
+  --border: #cccccc;
+  --shadow: rgba(0, 0, 0, 0.2);
+  --link: #1e7dc0;
+  --linkhover: #ff8800;
+  --twitter: #55acee;
+  --facebook: #3b5998;
+
+  /* products */
+  --near: #ff2e63;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+* {
+  color: var(--text);
+}
