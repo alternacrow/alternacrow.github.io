@@ -51,6 +51,26 @@ export default function Home() {
               />
             </ExternalLink>
           </section>
+
+          <section className={styles.section}>
+            <h2 className={styles.h2}>雑多なメモとか</h2>
+
+            <ul>
+              <li>
+                <ExternalLink className={styles.notes} href=""></ExternalLink>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <ExternalLink className={styles.notes} href=""></ExternalLink>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <ExternalLink className={styles.notes} href=""></ExternalLink>
+              </li>
+            </ul>
+          </section>
         </article>
       </main>
     </div>

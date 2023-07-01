@@ -9,7 +9,7 @@ export const Header: FC = () => {
     <header className={styles.container}>
       <h1 className={styles.title}>
         <Image
-          className={styles.icon}
+          className={styles.titleIcon}
           src={"/icon.svg"}
           alt="alternacrow"
           width={32}

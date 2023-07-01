@@ -1,12 +1,16 @@
 import { FC, ReactNode } from "react";
 
-type Props = {
+export type ProductCardProps = {
   icon: ReactNode;
   title: string;
   description: string;
 };
 
-export const ProductCard: FC<Props> = ({ icon, title, description }) => {
+export const ProductCard: FC<ProductCardProps> = ({
+  icon,
+  title,
+  description,
+}) => {
   return (
     <dl
       style={{
