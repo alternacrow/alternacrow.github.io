@@ -1,5 +1,9 @@
 .container {
-  padding: 24px 16px;
+}
+.inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: 24px 12px;
 }
 .copy_right {
   font-size: 14px;

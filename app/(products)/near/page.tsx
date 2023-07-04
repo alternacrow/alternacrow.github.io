@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Abhaya_Libre } from "next/font/google";
+
 import styles from "./page.module.css";
 
 const abhayaLibre = Abhaya_Libre({

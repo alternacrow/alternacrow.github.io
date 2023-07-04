@@ -10,8 +10,9 @@ const notoSansJp = Noto_Sans_JP({
 });
 
 export const metadata = {
-  title: "alternacrow",
-  description: "alternacrow's website",
+  title: "利用規約・プライバシーポリシー",
+  description:
+    "alternacrowの開発・運用するスマートフォン用アプリケーションの利用規約・プライバシーポリシーです。",
 };
 
 export default function RootLayout({
@@ -21,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={notoSansJp.className}>{children}</body>
+      <body className={`${notoSansJp.className}`}>{children}</body>
     </html>
   );
 }
