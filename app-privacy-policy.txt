@@ -1,4 +1,4 @@
-0:["Nczuv3O_l_2i2C5QxoaUe",[[["",{"children":["(products)",{"children":["app-privacy-policy",{"children":["__PAGE__",{}]},"$undefined","$undefined",true]}]}],"$L1",[[],["$L2",["$","meta",null,{"name":"next-size-adjust"}]]]]]]
+0:["ASa0xsC9a6WEHPckpaxPN",[[["",{"children":["(products)",{"children":["app-privacy-policy",{"children":["__PAGE__",{}]},"$undefined","$undefined",true]}]}],"$L1",[[],["$L2",["$","meta",null,{"name":"next-size-adjust"}]]]]]]
 3:HC["/",{"crossOrigin":"anonymous"}]
 4:HL["/_next/static/css/2c28c7f4bdf5759f.css",{"as":"style"}]
 5:HL["/_next/static/css/f82b27b8a3e6c168.css",{"as":"style"}]
