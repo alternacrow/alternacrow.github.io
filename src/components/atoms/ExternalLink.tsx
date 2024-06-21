@@ -7,3 +7,4 @@ export const ExternalLink: FC<Props> = ({ children, ...props }) => (
     {children}
   </a>
 );
+

@@ -9,7 +9,6 @@
   font-weight: 500;
   display: flex;
   align-items: center;
-  letter-spacing: 1;
   text-decoration-line: underline;
   text-underline-offset: 4px;
   transition: opacity 0.1s linear;
