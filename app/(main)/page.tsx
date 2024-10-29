@@ -24,20 +24,6 @@ const products: ProductProps[] = [
     ),
     href: "https://apps.apple.com/jp/app/near-%E3%83%94%E3%83%AB%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA/id1662208711",
   },
-  {
-    title: "MeARIs Studio",
-    description: "MeARIs様のホームページ",
-    appIcon: (
-      <Image
-        className={styles.productCardMearisStudioIcon}
-        src="/mearis-studio-icon.svg"
-        alt="MeARIs Studio"
-        width={32}
-        height={32}
-      />
-    ),
-    href: "https://mearis-studio.com",
-  },
 ];
 
 const contacts: ContactProps[] = [

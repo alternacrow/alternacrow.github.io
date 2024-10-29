@@ -36,12 +36,6 @@
   width: 32px;
   height: 32px;
 }
-.productCardMearisStudioIcon {
-  border-radius: 8px;
-  border: 1px solid var(--secondary);
-  width: 32px;
-  height: 32px;
-}
 .contactItem {
   margin-block: 8px;
 }
